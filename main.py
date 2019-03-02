@@ -3,6 +3,8 @@ import requests
 from kivy.app import App
 from kivy.uix.widget import Widget
 
+# TODO Replace requests with  https://kivy.org/doc/stable/_modules/kivy/network/urlrequest.html
+
 
 class MainWindow(Widget):
 
