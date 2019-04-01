@@ -10,3 +10,4 @@ Install to devices::
 
   python3 -m buildozer --verbose android deploy
 
+Live coding of this app: https://www.youtube.com/watch?v=QzCOSgEh3gs
