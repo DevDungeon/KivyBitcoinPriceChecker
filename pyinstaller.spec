@@ -2,11 +2,12 @@
 
 # Default spec file except the data file (.kv) is added and
 # console is set to False, and the icon file added too.
+from kivy_deps import sdl2, glew
 block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['/home/dtron/kivybitcoinpricechecker'],
+             pathex=['.'],
              binaries=[],
              datas=[('bitcoinchecker.kv', '.')],
              hiddenimports=[],
@@ -28,12 +29,13 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          console=False,
-          icon='icon.png' )
+          console=True,
+          icon='icon.ico' )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
+               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins)],
                strip=False,
                upx=True,
                upx_exclude=[],
