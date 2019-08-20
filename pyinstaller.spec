@@ -2,7 +2,15 @@
 
 # Default spec file except the data file (.kv) is added and
 # console is set to False, and the icon file added too.
-from kivy_deps import sdl2, glew
+
+
+import os
+
+extra_deps = list()
+if os.name == 'nt':
+    from kivy_deps import sdl2, glew
+    extra_deps = (sdl2.dep_bins + glew.dep_bins)
+
 block_cipher = None
 
 
@@ -35,7 +43,7 @@ coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
-               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins)],
+               *[Tree(p) for p in extra_deps],
                strip=False,
                upx=True,
                upx_exclude=[],
