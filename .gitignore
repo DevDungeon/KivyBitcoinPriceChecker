@@ -2,3 +2,6 @@ venv/
 .idea
 .buildozer
 bin/
+__pycache__
+build/
+dist/

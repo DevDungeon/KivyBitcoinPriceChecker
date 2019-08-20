@@ -4,7 +4,7 @@
 title = Bitcoin Price Checker
 
 # (str) Package name
-package.name = kivybitcoinchecker
+package.name = kivybitcoinchecker2
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = com.devdungeon
@@ -46,10 +46,10 @@ requirements = python3,kivy,requests
 #garden_requirements =
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/presplash.png
+presplash.filename = %(source.dir)s/icon.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/data/icon.png
+icon.filename = %(source.dir)s/icon.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
